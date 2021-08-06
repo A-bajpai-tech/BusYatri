@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <div class="navbar-container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: white;">Yatri</a>
+    </div>
+  <ul>
+    <li class="underline">
+      <a href="#">Medical Invention
+      </a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a href="anandita.html">Appointment</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a href="#">My Record</a>
+      <div class="underline"></div>
+    </li>
+    <li class="nav-link">
+      <a href="#">Help Center</a>
+      <div class="underline"></div>
+    </li>
+  </ul>
+</div>
+ <div class="container">
+<center><h3>Destination</h3></center>
+<div style="text-align: right;">
+<input type="text" id="ip2"/>
+<p>TO</p>
+</div>
+<p>----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<div style="text-align: left;">
+<input type="text" id="ip3"/>
+<p>FROM</p>
+</div>
+<div class="main-list" id="list_div">
+  <div class="list_item">
+    <p>Bus Number</p>
+    <p>Time</p>
+    <p>From</p>
+    <p>To</p>
+  </div>
+</div>
+</div>
+<center>
+  <a href="seat.html">
+<button type="button" class="btn btn-primary" onclick="retreivedata()">SHOW  BUSES</button>
+</a>
+</center>
+</body>
+<style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+  body, html {
+  margin: 0;
+  font-family: Roboto, Arial, helvetica, sans-serif;
+}
+
+a {
+  outline: none;
+}
+
+.navbar-container {
+  text-align: center;
+  background-color: #00BFFF;
+  box-shadow: 0px -20px 5px 20px #333333;
+  padding: 10px;
+  font-size: 0;
+}
+
+.navbar-container ul {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-container ul li {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.navbar-container ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;  
+  padding: 10px;
+  transition: color 0.5s;
+}
+
+.navbar-container ul li .underline {
+  height: 3px;
+  background-color: transparent;
+  width: 0%;
+  transition: width 0.2s, background-color 0.5s;
+  margin: 0 auto;
+}
+
+.navbar-container ul li.active-link .underline {
+  width: 100%;
+  background-color: white;
+}
+
+.navbar-container ul li:hover .underline {
+  background-color: white;
+  width: 100%;
+}
+
+.navbar-container ul li:hover a {
+}
+
+.navbar-container ul li:active a {
+  transition: none;
+  color: rgba(255,255,255,0.76);
+}
+
+.navbar-container ul li:active .underline {
+  transition: none;
+  background-color: rgba(255,255,255,0.76);
+}
+
+
+#ip2 {
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 200px;
+    height: 20px; 
+      padding-top: 10px; 
+      margin-top: 150px;
+
+}
+#ip3 {
+    border-radius: 25px;
+    border: 2px solid #609;
+    padding: 20px; 
+    width: 200px;
+    height: 15px; 
+    padding-top: 10px; 
+
+}
+
+
+</style>
+</html>

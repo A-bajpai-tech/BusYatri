@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Login Page </title>
+    <meta name="description" content="Login Page Example" />
+    <meta name="author" content="Ali Abbasi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="left-container">
+        <h2> Sign up form</h2>
+        <div style="width: 100%;">
+          <form action="#" class="signup-form">
+            <input type="text" id="first-name" placeholder="First Name">
+            <input type="text" id="last-name" placeholder="Last Name">
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="password" id="password" placeholder="Password">
+             <button  type="submit" id="button" class="btn btn-primary deep-purple btn-block  " style="background-color: #339CFF" onclick="storedata()">Submit</button>
+          </form>
+        </div>
+       
+      </div>
+    </div>
+  
+
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-firestore.js"></script>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyDbImDpUU9fTezCpc90IJKmDC6-YTUPwXc",
+    authDomain: "bus-yatri.firebaseapp.com",
+    projectId: "bus-yatri",
+    storageBucket: "bus-yatri.appspot.com",
+    messagingSenderId: "706079922557",
+    appId: "1:706079922557:web:694e1262af47da7f8c1414",
+    measurementId: "G-ZJY15XE2N6"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="signup.js"></script>
+  </body>
+  <style>
+    body {
+ background-color:  #5d8fc9;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Secular One', sans-serif;
+}
+h1{
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #0d28c0;
+}
+
+a:hover{
+  color: #071561;
+}
+
+.main-container {
+  display: flex;
+  width: 70%;
+  height: 700px;
+  min-height: 80vh;
+  background-color: white;
+  margin: 10vh auto;
+  border-radius: 12px;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.left-container {
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right-container {
+  width: 60%;
+  height: 100%;
+  background-image: url("train.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 0 10px 10px 0;
+}
+.signup-form {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form input {
+  border-radius: 200px;
+  padding: 5px 15px;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: #ddd;
+  color: #444;
+  border: none;
+}
+
+.signup-form input {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  font-family: inherit;
+}
+
+.signup-form input.first-name,
+.signup-form input.last-name {
+  width: 48%;
+}
+
+.signup-form input:focus {
+  outline: none;
+}
+
+.signup-form button {
+  color: white;
+  background-color: #bf360c;
+  border: none;
+  padding: 1rem;
+  font-family: inherit;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.signup-form button:hover{
+  background-color: #83260a;
+  cursor: pointer;
+}
+
+button.disabled {
+  color: grey;
+  background-color: darkgrey;
+}
+
+button.disabled:hover {
+  color: grey;
+  background-color: darkgrey;
+  cursor: unset;
+}
+
+@media (max-width:1240px){
+  .left-container{
+    width: 50%;
+  }
+  .right-container{
+    width: 50%;
+  }
+}
+
+@media (max-width:970px){
+  .signup-form button{
+    font-size: 1rem;
+  }
+  .signin-link{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width:950px) {
+  .left-container{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .main-container h1{
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  .signup-form input{
+    margin-top: 0.5rem;
+  }
+  .right-container{
+    display: none;
+  }
+}
+
+@media (max-width:550px){
+  .main-container{
+    width: 90%;
+    left: 5%;
+  }
+}
+  </style>
+</html>
